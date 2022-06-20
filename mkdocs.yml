@@ -1,0 +1,135 @@
+site_name: "DSC 650 &ndash; Big Data"
+site_description: >-
+  This course covers the fundamentals of data infrastructure and how technologies fit together
+  to form a process, or pipeline, to refine data into usable datasets. This course focuses
+  on building a predictive modeling pipeline used by the various types of projects that
+  are called, “big data.”
+
+site_author: "Bellevue University"
+site_url: "https://bellevue-university.github.io/dsc650/"
+
+# Repository
+repo_name: 'bellevue-university/dsc650'
+repo_url: 'https://github.com/bellevue-university/dsc650'
+
+# Copyright
+copyright: 'Copyright &copy; 2018 - 2020 Bellevue University'
+
+# Configuration
+theme:
+  name: 'material'
+  language: 'en'
+  features:
+    - tabs
+  palette:
+    primary: 'deep purple'
+    accent: 'deep purple'
+  icon:
+    logo: material/library
+    repo: fontawesome/brands/git-alt
+  font:
+    text: Roboto
+    code: Roboto Mono
+  # Don't include MkDocs' JavaScript
+  include_search_page: false
+  search_index_only: true
+
+# Plugins
+plugins:
+    - search
+    - git-revision-date-localized
+    - minify:
+        minify_html: true
+    - table-reader
+
+# Customization
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/bellevue-university
+
+# Extensions
+markdown_extensions:
+  - markdown.extensions.admonition
+  - markdown.extensions.attr_list
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:pymdownx.emoji.twemoji
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: bellevue-university
+      repo: dsc650
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_div_format
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Page tree
+nav:
+    - About: index.md
+    - Setup:
+        - Overview: setup/index.md
+        - Hosted: setup/hosted.md
+        - Windows: setup/windows.md
+        - macOS: setup/macOS.md
+        - Ubuntu: setup/ubuntu.md
+    - Lessons:
+        - Ten Week:
+          - Week 1: lessons/10-week/week01.md
+          - Week 2: lessons/10-week/week02.md
+          - Week 3: lessons/10-week/week03.md
+          - Week 4: lessons/10-week/week04.md
+          - Week 5: lessons/10-week/week05.md
+          - Week 6: lessons/10-week/week06.md
+          - Week 7: lessons/10-week/week07.md
+          - Week 8: lessons/10-week/week08.md
+          - Week 9: lessons/10-week/week09.md
+          - Week 10: lessons/10-week/week10.md
+        - Twelve Week:
+          - Week 1: lessons/12-week/week01.md
+          - Week 2: lessons/12-week/week02.md
+          - Week 3: lessons/12-week/week03.md
+          - Week 4: lessons/12-week/week04.md
+          - Week 5: lessons/12-week/week05.md
+          - Week 6: lessons/12-week/week06.md
+          - Week 7: lessons/12-week/week07.md
+          - Week 8: lessons/12-week/week08.md
+          - Week 9: lessons/12-week/week09.md
+          - Week 10: lessons/12-week/week10.md
+          - Week 11: lessons/12-week/week11.md
+          - Week 12: lessons/12-week/week12.md
+        - Fundamentals:
+            - Latency: lessons/fundamentals/latency.md
+            - Size: lessons/fundamentals/size.md
+    - Data Sets: data/index.md
+    - Q&A:
+        - Neural Networks: faq/neural-networks.md
+
+# MathJax JavaScript
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML
+  - https://unpkg.com/mermaid@8.4.8/dist/mermaid.min.js
